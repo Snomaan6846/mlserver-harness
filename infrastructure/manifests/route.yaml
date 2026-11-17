@@ -1,0 +1,25 @@
+# OpenShift Route (edge TLS termination) for the REST service.
+#
+# Used by the transport domain's route-vs-direct plan: external route
+# path vs cluster-internal Service path. The external hostname is
+# cluster-specific: mlserver-rfdetr-mlserver-perf.apps.<cluster-domain>.
+#
+# NOTE: routed gRPC is NOT possible on OpenShift edge routes with a
+# cleartext h2c backend (edge forwards HTTP/1.1). REST only.
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: mlserver-rfdetr
+  namespace: mlserver-perf
+  labels:
+    app: mlserver-rfdetr
+spec:
+  host: ""  # left empty: OpenShift assigns the cluster's apps domain
+  to:
+    kind: Service
+    name: mlserver-rfdetr
+  port:
+    targetPort: rest
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect

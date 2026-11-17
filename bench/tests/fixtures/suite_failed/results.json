@@ -1,0 +1,41 @@
+{
+  "status": "COMPLETE",
+  "manifest": {
+    "image": {
+      "digest": "quay.io/opendatahub/mlserver@sha256:fixture",
+      "target": "cpu"
+    },
+    "host": {
+      "cpu_model": "fixture-cpu",
+      "cores_logical": 16
+    }
+  },
+  "config": {
+    "load_profile": "quick"
+  },
+  "cases": [
+    {
+      "suite": "protocol",
+      "framework": "sklearn",
+      "tier": "small",
+      "model": "m",
+      "params": {
+        "concurrency": 8
+      },
+      "round": 0,
+      "result": {
+        "throughput_rps": 1500.0,
+        "latency_ms_p99": 8.0
+      }
+    },
+    {
+      "suite": "caching",
+      "framework": "sklearn",
+      "tier": "small",
+      "status": "SUITE_FAILED",
+      "error": "RuntimeError",
+      "detail": "error rate 100.00% exceeds threshold 0.10% \u2014 aborting (first error: 'VaryingJsonSender' object has no attribute '_accept_encoding')",
+      "result": {}
+    }
+  ]
+}

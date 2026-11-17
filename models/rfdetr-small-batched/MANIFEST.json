@@ -1,0 +1,8 @@
+{
+  "model": "rfdetr-small-batched",
+  "files": {
+    "model-settings.json": "c2bc6d65397da15c0f8def277744bf931b3910b7488434f14e35ed55cedcfc36",
+    "model.onnx": "6d4e2e3b2a9aeb18413a8099f0318a8b7f7f861d7a2f88d3e57b25c72d02053e"
+  },
+  "serving_name": "rfdetr-small-batched"
+}

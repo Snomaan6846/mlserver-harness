@@ -1,0 +1,38 @@
+{
+  "round_offset": 0,
+  "rounds": 1,
+  "clients": 2,
+  "seconds": 3600,
+  "warmup_seconds": 60,
+  "warmup_requests": 8,
+  "timeout_seconds": 3700,
+  "ready_timeout_seconds": 300,
+  "prepare_timeout_seconds": 900,
+  "max_start_lateness_ms": 20,
+  "concurrency": [
+    8
+  ],
+  "session": "soak-60min",
+  "variants": [
+    {
+      "name": "soak-binary-worker",
+      "prepare_argv": [
+        "python3",
+        "/store/tools/hook.py",
+        "soak-binary-worker"
+      ],
+      "spec": {
+        "protocol": "rest",
+        "url": "http://mlserver-rfdetr.mlserver-perf.svc:8080/v2/models/rfdetr-small/infer",
+        "payloads": [
+          "/store/payloads/triton-binary-rest.bin"
+        ],
+        "headers": {
+          "Content-Type": "application/octet-stream",
+          "Inference-Header-Content-Length": "225"
+        },
+        "min_response_bytes": 100000
+      }
+    }
+  ]
+}

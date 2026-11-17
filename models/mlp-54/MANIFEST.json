@@ -1,0 +1,9 @@
+{
+  "model": "mlp-54",
+  "files": {
+    "generate.py": "c2f5207fe4363983263e09caf6f8d0998e7817a0482f09a2edfc98340da31893",
+    "model-settings.json": "3ea01f1a2c282288523e4b9006f054ae3621a34b169ac1e614d2194e988de899",
+    "model.onnx": "b6c6fc6517a1ceb43210b011fa46c3305993b7d97a58b04969dccf8e4a3e89dd"
+  },
+  "serving_name": "mlp-small"
+}

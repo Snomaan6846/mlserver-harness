@@ -1,0 +1,7 @@
+{
+  "triton-binary-mlp-small-1.bin": 164,
+  "triton-binary-mlp-small-100.bin": 168,
+  "triton-binary-mlp-small-1000.bin": 170,
+  "triton-binary-mlp-small-0.bin": 164,
+  "triton-binary-rest.bin": 225
+}

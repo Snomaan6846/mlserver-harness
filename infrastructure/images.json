@@ -1,0 +1,11 @@
+{
+  "baseline": "quay.io/opendatahub/odh-mlserver-cuda@sha256:4c8168e9955daad321eedcd65bbcd27c9f210cfd56f8317f3fa12b10324de3fe",
+  "baseline-cpu": "quay.io/opendatahub/mlserver@sha256:71b302fcc7dac94795d748601efbb9646cded770ec1feddff4cadcb111c9d11f",
+  "ship": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+  "ship-phase2": "quay.io/syedali/mlserver-cuda@sha256:2bcd2f47ddb1347d823649ecf3b3d5b9b4cb4e417cd2aa6eafd5a11b19125b34",
+  "notes": {
+    "baseline": "opendatahub-io/MLServer master @ 9f4cb29ae70880e34a47c8fccfe0d402e2762fb9",
+    "ship": "rhoaieng-102092 @ a772f6312bf8d961222f4f800170b794283ebbff (PR #378, merged) - has rest_binary_tensor, rest_worker_binary, grpc converter fix",
+    "ship-phase2": "rhoaieng-102092 @ 8424bf32e46b268bd02ecf1570c5dfe4a4f3f9f7 - binary tensor + gRPC fix only"
+  }
+}

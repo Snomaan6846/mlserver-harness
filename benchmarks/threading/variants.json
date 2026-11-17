@@ -1,0 +1,764 @@
+{
+  "gpu-t1": {
+    "deployment": "mlserver-rfdetr",
+    "service": "mlserver-rfdetr",
+    "device": "cuda",
+    "expect_cuda": true,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CUDAExecutionProvider\",\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 1, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "gpu-grpc-t1": {
+    "deployment": "mlserver-rfdetr",
+    "service": "mlserver-rfdetr",
+    "device": "cuda",
+    "expect_cuda": true,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CUDAExecutionProvider\",\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "true",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 1, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "gpu-t2": {
+    "deployment": "mlserver-rfdetr",
+    "service": "mlserver-rfdetr",
+    "device": "cuda",
+    "expect_cuda": true,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CUDAExecutionProvider\",\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 2, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "gpu-grpc-t2": {
+    "deployment": "mlserver-rfdetr",
+    "service": "mlserver-rfdetr",
+    "device": "cuda",
+    "expect_cuda": true,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CUDAExecutionProvider\",\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "true",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 2, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "gpu-t4": {
+    "deployment": "mlserver-rfdetr",
+    "service": "mlserver-rfdetr",
+    "device": "cuda",
+    "expect_cuda": true,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CUDAExecutionProvider\",\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 4, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "gpu-grpc-t4": {
+    "deployment": "mlserver-rfdetr",
+    "service": "mlserver-rfdetr",
+    "device": "cuda",
+    "expect_cuda": true,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CUDAExecutionProvider\",\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "true",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 4, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "gpu-t8": {
+    "deployment": "mlserver-rfdetr",
+    "service": "mlserver-rfdetr",
+    "device": "cuda",
+    "expect_cuda": true,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CUDAExecutionProvider\",\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 8, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "gpu-grpc-t8": {
+    "deployment": "mlserver-rfdetr",
+    "service": "mlserver-rfdetr",
+    "device": "cuda",
+    "expect_cuda": true,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CUDAExecutionProvider\",\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "true",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 8, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "gpu-spin-off": {
+    "deployment": "mlserver-rfdetr",
+    "service": "mlserver-rfdetr",
+    "device": "cuda",
+    "expect_cuda": true,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CUDAExecutionProvider\",\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 2, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "gpu-spin-on": {
+    "deployment": "mlserver-rfdetr",
+    "service": "mlserver-rfdetr",
+    "device": "cuda",
+    "expect_cuda": true,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CUDAExecutionProvider\",\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 2, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"1\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "gpu-cudnn-heuristic": {
+    "deployment": "mlserver-rfdetr",
+    "service": "mlserver-rfdetr",
+    "device": "cuda",
+    "expect_cuda": true,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CUDAExecutionProvider\",\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 2, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}",
+      "MLSERVER_MODEL_ONNX_PROVIDER_OPTIONS": "[{\"cudnn_conv_algo_search\": \"HEURISTIC\"}, {}]"
+    }
+  },
+  "gpu-cudnn-exhaustive": {
+    "deployment": "mlserver-rfdetr",
+    "service": "mlserver-rfdetr",
+    "device": "cuda",
+    "expect_cuda": true,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CUDAExecutionProvider\",\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 2, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}",
+      "MLSERVER_MODEL_ONNX_PROVIDER_OPTIONS": "[{\"cudnn_conv_algo_search\": \"EXHAUSTIVE\"}, {}]"
+    }
+  },
+  "cpu-w1t1": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 1, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "cpu-w1t2": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 2, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "cpu-w1t4": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 4, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "cpu-w1t8": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 8, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "cpu-w2t1": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "2",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 1, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "cpu-w2t2": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "2",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 2, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "cpu-w2t4": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "2",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 4, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "cpu-w2t8": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "2",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 8, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "cpu-w4t1": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "4",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 1, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "cpu-w4t2": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "4",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 2, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "cpu-w4t4": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "4",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 4, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "cpu-w4t8": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "4",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 8, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "cpu-grpc-stock-t2": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 2, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "cpu-grpc-stock-t8": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 8, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "cpu-grpc-raw-t2": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "true",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 2, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "cpu-grpc-raw-t8": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "true",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 8, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "cpu-spin-off": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "4",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 8, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "cpu-spin-on": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "4",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 8, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"1\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "cpu-affinity-os": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 8, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "cpu-affinity-pinned": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 8, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\", \"session.intra_op_thread_affinities\": \"1;2;3;4;5;6;7\"}"
+    }
+  },
+  "cpu-spin-default": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "4",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 8, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"1\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "cpu-spin-tuned": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "4",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 8, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"1\", \"session.inter_op.allow_spinning\": \"0\", \"session.intra_op.spin_duration_us\": \"1000\", \"session.intra_op.spin_backoff_max\": \"8\"}"
+    }
+  },
+  "cpu-latency-t2": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 2, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "cpu-latency-t8": {
+    "deployment": "mlserver-rfdetr-cpu",
+    "service": "mlserver-rfdetr-cpu",
+    "device": "cpu",
+    "expect_cuda": false,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "false",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 8, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "gpu-binary-worker": {
+    "deployment": "mlserver-rfdetr",
+    "service": "mlserver-rfdetr",
+    "device": "cuda",
+    "expect_cuda": true,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CUDAExecutionProvider\",\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "true",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "false",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 2, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  },
+  "gpu-binary-worker-graph": {
+    "deployment": "mlserver-rfdetr",
+    "service": "mlserver-rfdetr",
+    "device": "cuda",
+    "expect_cuda": true,
+    "image": "quay.io/syedali/mlserver-cuda@sha256:b6094ab1ae67ef09287e61e70e26ab412731551dd89c5790cc4898843800030c",
+    "env": {
+      "MLSERVER_MODEL_ONNX_PROVIDERS": "[\"CUDAExecutionProvider\",\"CPUExecutionProvider\"]",
+      "MLSERVER_PARALLEL_WORKERS": "1",
+      "MLSERVER_REST_WORKER_JSON": "false",
+      "MLSERVER_REST_BINARY_TENSOR": "true",
+      "MLSERVER_REST_WORKER_BINARY": "true",
+      "MLSERVER_GRPC_RAW_INPUT_BUFFERS": "false",
+      "MLSERVER_PARALLEL_INFERENCE_TRANSPORT": "zmq",
+      "MLSERVER_MODEL_ONNX_CUDA_GRAPH": "true",
+      "MLSERVER_MODEL_ONNX_CUDA_BLOCKING_SYNC": "false",
+      "MLSERVER_MODEL_ONNX_SESSION_OPTIONS": "{\"intra_op_num_threads\": 2, \"inter_op_num_threads\": 1}",
+      "MLSERVER_MODEL_ONNX_SESSION_CONFIG_ENTRIES": "{\"session.intra_op.allow_spinning\": \"0\", \"session.inter_op.allow_spinning\": \"0\"}"
+    }
+  }
+}

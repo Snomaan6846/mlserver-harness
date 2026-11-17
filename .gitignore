@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.mypy_cache/
+dist/
+*.egg-info/
+
+# Benchmark outputs (evidence is generated, never hand-edited)
+results/*/
+results/STATE.json
+!results/.gitkeep
+
+# Auto-materialized model zoo (reproducible from seeds / pinned registry)
+models-zoo/
+
+# Local scratch
+*.log
+.DS_Store
+
+# Regenerable binaries (benchmarks/*/generate.py + models/*/generate.py
+# rebuild these before benchmarking) — kept in the parallel workdocs
+# directory, never committed
+models/*/*.onnx
+payloads/*/*.bin
+
+# Generated reports (tools/report.py default output — evidence lives
+# in the parallel workdocs directory, not the repo)
+reports/
+
+# Tooling caches
+.tox/
+.coverage*
+htmlcov/

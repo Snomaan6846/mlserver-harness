@@ -1,0 +1,31 @@
+name: ci
+on: [push, pull_request]
+
+# NOTE: unverified until this repo has a remote — the workflow cannot
+# run locally. The sibling checkout below exists so ../MLServer
+# resolves in Actions (tests and mutation targets that need the fork's
+# source would otherwise skip, and a fully-skipped test reads as NOT
+# CAUGHT to the mutation checker).
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: repo
+      - uses: actions/checkout@v4
+        with:
+          repository: opendatahub-io/MLServer
+          path: MLServer
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[dev]"
+        working-directory: repo
+      - run: python -m flake8 bench tools
+        working-directory: repo
+      - run: python -m pytest bench/tests tools/tests -q
+        working-directory: repo
+      - name: mutation checks (tests have teeth)
+        run: python tools/mutation_check.py
+        working-directory: repo

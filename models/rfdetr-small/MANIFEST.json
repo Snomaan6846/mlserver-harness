@@ -1,0 +1,8 @@
+{
+  "model": "rfdetr-small",
+  "files": {
+    "model-settings.json": "63b47492c31530bcaa6f4c702244107d0d6073198a8f94c933008a5dfe6a6996",
+    "model.onnx": "a018914e11d589b8b51154f00ed1103f148a320a3960f768bd44f57d55d0ab51"
+  },
+  "serving_name": "rfdetr-small"
+}

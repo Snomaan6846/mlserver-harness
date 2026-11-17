@@ -1,0 +1,12 @@
+{
+  "name": "mlp-small",
+  "implementation": "mlserver_onnx.OnnxModel",
+  "parameters": {
+    "uri": "./model.onnx",
+    "extra": {
+      "providers": [
+        "CPUExecutionProvider"
+      ]
+    }
+  }
+}

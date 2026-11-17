@@ -1,0 +1,61 @@
+{
+  "round_offset": 0,
+  "rounds": 3,
+  "clients": 2,
+  "seconds": 60,
+  "warmup_seconds": 60,
+  "warmup_requests": 8,
+  "timeout_seconds": 120,
+  "ready_timeout_seconds": 300,
+  "prepare_timeout_seconds": 900,
+  "max_start_lateness_ms": 20,
+  "concurrency": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "session": "stock-vs-binary",
+  "variants": [
+    {
+      "name": "stock-json",
+      "prepare_argv": [
+        "python3",
+        "/store/tools/hook.py",
+        "stock-json"
+      ],
+      "spec": {
+        "protocol": "rest",
+        "url": "http://mlserver-rfdetr.mlserver-perf.svc:8080/v2/models/rfdetr-small/infer",
+        "payloads": [
+          "/store/payloads/j0-0.bin"
+        ],
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "min_response_bytes": 100000
+      }
+    },
+    {
+      "name": "binary-rest",
+      "prepare_argv": [
+        "python3",
+        "/store/tools/hook.py",
+        "binary-rest"
+      ],
+      "spec": {
+        "protocol": "rest",
+        "url": "http://mlserver-rfdetr.mlserver-perf.svc:8080/v2/models/rfdetr-small/infer",
+        "payloads": [
+          "/store/payloads/triton-binary-rest.bin"
+        ],
+        "headers": {
+          "Content-Type": "application/octet-stream",
+          "Inference-Header-Content-Length": "225"
+        },
+        "min_response_bytes": 100000
+      }
+    }
+  ]
+}
